@@ -11,7 +11,7 @@ node {
         sh 'pytest'
     }
 
-    docker.withRegistry('https://hub.docker.com/', 'Docker Hub Creds') {
+    docker.withRegistry('https://hub.docker.com/', 'Docker Hub creds') {
         customImage.push()
     }
 
