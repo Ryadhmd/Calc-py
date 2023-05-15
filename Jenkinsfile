@@ -11,9 +11,8 @@ node {
         sh 'pytest'
     }
 
-    docker.withRegistry('https://dockerhub.com', 'Docker Hub Creds) {
-            customImage.push()
-            customImage.push('latest')
+    docker.withRegistry('https://hub.docker.com/', 'Docker Hub Creds') {
+        customImage.push()
     }
 
 }
