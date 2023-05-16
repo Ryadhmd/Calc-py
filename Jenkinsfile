@@ -1,11 +1,12 @@
 node {
-    
+
     stage('Checkout') {
         checkout scm
     }
 
+    def customImage 
     stage('Build and Test') {
-        def customImage = docker.build("ryadhamdini/calc-py:${env.BUILD_ID}")
+        customImage = docker.build("ryadhamdini/calc-py:${env.BUILD_ID}")
 
         customImage.inside {
             sh 'pytest'
