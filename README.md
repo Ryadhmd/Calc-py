@@ -42,7 +42,7 @@ Run the calculator.py file:
 python calculator.py
 ```
 
-Continuous Integration and Delivery (CI/CD)
+## Continuous Integration and Delivery (CI/CD)
 
 The Calculator project incorporates CI/CD principles to ensure the development process is streamlined and reliable. The Jenkins pipeline defined in the Jenkinsfile automates the build, test, and deployment processes. Here's an overview of the pipeline steps:
 
