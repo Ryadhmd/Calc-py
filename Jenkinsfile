@@ -6,7 +6,8 @@ node {
     customImage.inside {
         sh 'pytest'
     }
-    docker.withRegistry('', 'Dockerhub')
-    customImage.push()
+    docker.withRegistry('', 'Dockerhub'){
+        customImage.push()
+    }
 
 }
